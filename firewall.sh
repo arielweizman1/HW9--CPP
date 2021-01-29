@@ -28,6 +28,6 @@ while read packet; do
     if [[ "$result4" == "" ]]; then
       continue
     fi
-    echo $(echo $packet | sed 's/ //g')
+    echo "$packet"
   done
-done | sort -u
+done | sort -u | sed 's/ //g'
