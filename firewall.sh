@@ -2,7 +2,6 @@
 ##
 # @brief print the uniq packets that passed the rules.
 # @param $1 -the rules
-# @param argv An explanation on the "argv" parameter
 ##
 
 rules=$(cat $1 | sed 's/#.*//' | sed '/^[[:space:]]*$/d' | sed 's/ //g')
